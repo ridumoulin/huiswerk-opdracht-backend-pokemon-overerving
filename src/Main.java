@@ -25,15 +25,23 @@ public class Main {
     // In de main methode en de Main klasse hoef je niks te veranderen.
     public static void main(String[] args) {
         Scanner speler_A = new Scanner(System.in);
+
         PokemonGymImpl pokemonGym = new PokemonGymImpl(pokemons);
         System.out.println("First player please enter your name: ");
+
         String userA = speler_A.nextLine();
+
         PokemonTrainer player1 = new PokemonTrainer(userA, pokemons);
+
         System.out.println("To start your game, we have given you 6 Pokemons use");
+
         System.out.println("these are the Pokemons you get:");
+
         pokemonGym.printPokemon(pokemons);
         System.out.println("Would you like to enter a gym looking for a fight?");
+
         System.out.println("Please enter yes or no");
+
         if (speler_A.nextLine().equals("yes")) {
             pokemonGym.enteredTheGym(player1);
         }
